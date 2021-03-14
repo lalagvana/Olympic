@@ -71,7 +71,7 @@ namespace Notes.Controllers
         }
 
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public NoteResponse GetNoteById([FromRoute] Guid id)
         {
             var dbNote = _dbContext.Notes.FirstOrDefault(n => n.Id == id);
